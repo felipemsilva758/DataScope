@@ -1,16 +1,30 @@
 import pandas as pd
+import numpy as np
 
 def limpar_dados(tabela):
+
     tabela = tabela.dropna(how="all")
+
+    tabela = tabela.replace([np.inf, -np.inf], np.nan)
+    tabela = tabela.fillna(0)
 
     colunas_inuteis = []
 
-    for i in tabela.columns:
-        nome_tabelas = i.lower()
+    for coluna in tabela.columns:
 
-        if nome_tabelas.endswith("id"):
-            colunas_inuteis.append(i)
-    
+        nome = coluna.lower().strip()
+
+        valores_unicos = tabela[coluna].nunique()
+
+        total_linhas = len(tabela)
+
+        averiguando_id = nome.endswith("id")
+
+        muitos_unicos = valores_unicos >= total_linhas * 0.9
+
+        if averiguando_id and muitos_unicos:
+            colunas_inuteis.append(coluna)
+
     tabela = tabela.drop(columns=colunas_inuteis)
 
     return tabela
