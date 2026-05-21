@@ -10,6 +10,10 @@ export function Imshow({ resultado }) {
     if (!resultado) return null
 
     return (
+        <>
+        <div>
+            <p className='text-4xl'>Heatmap</p>
+        </div>
         <div>
                 <Plot
                     data={[
@@ -23,12 +27,10 @@ export function Imshow({ resultado }) {
                         }
                     ]}
                     layout={{
-                        title: {
-                            text: `heatmap`
-                        },
                         width: 800,
                         height: 800
                     }}
                 />
         </div>
+        </>
 )}

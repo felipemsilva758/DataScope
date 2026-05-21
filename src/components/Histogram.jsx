@@ -10,6 +10,10 @@ export function Histogram({ resultado }) {
     if (!resultado) return null
 
     return (
+        <>
+        <div>
+            <p className='text-4xl'>Histogramas</p>
+        </div>
         <div>
 
             {resultado.histogram.map((grafico, index) => (
@@ -24,7 +28,7 @@ export function Histogram({ resultado }) {
                     ]}
                     layout={{
                         title: {
-                            text: `Histograma - ${grafico.coluna}`
+                            text: `${grafico.coluna}`
                         },
                         width: 500,
                         height: 400
@@ -34,4 +38,5 @@ export function Histogram({ resultado }) {
             ))}
 
         </div>
+        </>
 )}

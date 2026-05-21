@@ -16,7 +16,7 @@ export function Botao({setResultado, setMostrar}) {
         const formData = new FormData()
         formData.append("file", file)
 
-        const res = await fetch("http://127.0.0.1:8000/analisar", {method: "POST", body: formData})
+        const res = await fetch("https://datascope-backend.onrender.com/analisar", {method: "POST", body: formData})
 
         const data = await res.json()
         setResultado(data)

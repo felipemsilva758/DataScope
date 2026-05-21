@@ -18,13 +18,13 @@ function App() {
         <p className='text-4xl'>Enviar CSV</p>
         <Botao setResultado={setResultado} resultado={resultado} setMostrar={setMostrar}/>
       </div>
-      <div className='flex flex-col gap-4 items-center justify-center'>
+      <div className='flex flex-col gap-12 items-center justify-center'>
           <Histogram resultado={resultado}/>
           <Scatter resultado={resultado}/>
           <Imshow resultado={resultado}/>
+      </div>
           <Logapi mostrar={mostrar} resultado={resultado}/>
       </div>
-    </div>
     </>
   )
 }

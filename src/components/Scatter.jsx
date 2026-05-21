@@ -10,9 +10,11 @@ export function Scatter({ resultado }) {
     if (!resultado) return null
 console.log(resultado)
     return (
-
+        <>
         <div>
-
+            <p className='text-4xl'>Scatters</p>
+        </div>
+        <div>
             {resultado.scatter.map((grafico, index) => (
                 
                 <Plot
@@ -54,4 +56,5 @@ console.log(resultado)
             ))}
 
         </div>
+        </>
 )}

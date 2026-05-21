@@ -1,92 +1,111 @@
+````md
 # DataScope
 
-DataScope é uma aplicação web para análise rápida de arquivos CSV, capaz de gerar automaticamente insights e visualizações a partir dos dados enviados pelo usuário.
+DataScope é uma plataforma web de análise de dados que transforma arquivos CSV em visualizações e insights automaticamente.
 
-## 🚀 Funcionalidades
+A aplicação permite que usuários façam upload de datasets e obtenham análises estatísticas, correlações e gráficos de forma rápida e intuitiva.
 
-* Upload de arquivos `.csv`
-* Limpeza automática dos dados
-* Remoção de colunas irrelevantes (ex: IDs)
-* Geração de:
+## 🌐 Projeto Online
 
-  * Matriz de correlação
-  * Histogramas das colunas mais relevantes
-  * Gráficos de dispersão com alta correlação
-* Exibição dos dados processados no frontend
+🔗 https://data-scope-mu.vercel.app/
 
-## 🧠 Como funciona
+---
 
-### 1. Upload do arquivo
+# 🚀 Funcionalidades
 
-O usuário seleciona um arquivo `.csv` pela interface.
+- Upload de arquivos CSV
+- Processamento automático de dados
+- Limpeza e preparação do dataset
+- Remoção de colunas irrelevantes
+- Análise de correlação entre variáveis
+- Geração de histogramas
+- Geração de gráficos de dispersão
+- Visualização dinâmica dos dados processados
+- Integração entre frontend e backend
 
-### 2. Envio para a API
+---
 
-O arquivo é enviado para o backend utilizando `FormData` via requisição `POST`.
+# 🧠 Fluxo da Aplicação
 
-### 3. Processamento dos dados
+## Upload do arquivo
+O usuário envia um arquivo `.csv` pela interface web.
 
-No backend (Python):
+## Processamento
+O backend recebe o arquivo e realiza:
 
-* Os dados são carregados com `pandas`
-* Linhas vazias são removidas
-* Colunas irrelevantes são descartadas
-* Apenas dados numéricos são analisados
+- leitura dos dados com Pandas
+- remoção de valores inválidos
+- seleção de colunas relevantes
+- filtragem de dados numéricos
 
-### 4. Análise
+## Análise
+A aplicação calcula:
 
-São geradas:
+- correlações
+- variância
+- relações entre colunas
+- dados para visualizações
 
-* Correlações entre variáveis
-* Variância para identificar colunas relevantes
-* Relações fortes entre dados (scatter)
+## Retorno
+Os dados processados são enviados em formato JSON para o frontend.
 
-### 5. Retorno
+## Exibição
+O frontend renderiza tabelas, métricas e gráficos dinamicamente.
 
-A API retorna os dados processados em formato JSON.
+---
 
-### 6. Exibição
+# 🛠️ Tecnologias Utilizadas
 
-O frontend (React) recebe os dados e os exibe na interface.
+## Frontend
+- React
+- Vite
+- TailwindCSS
 
-## 🛠️ Tecnologias utilizadas
+## Backend
+- Python
+- FastAPI
+- Pandas
+- Uvicorn
 
-### Frontend
+## Deploy
+- Vercel (Frontend)
+- Render (Backend)
 
-* React
-* Vite
-* TailwindCSS
+---
 
-### Backend
+# 📦 Como Rodar o Projeto Localmente
 
-* Python
-* FastAPI
-* Pandas
-
-## 📦 Como rodar o projeto
-
-### Backend
+## Frontend
 
 ```bash
-cd backend
-uvicorn api:app --reload
-```
-
-### Frontend
-
-```bash
-cd frontend
 npm install
 npm run dev
 ```
 
-## 📌 Observações
+## Backend
 
-* O projeto ainda está em desenvolvimento
-* Melhorias visuais e novos gráficos podem ser adicionados
-* Estrutura pensada para ser escalável
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn api:app --reload
+```
+---
 
-## 📄 Licença
+# 📌 Objetivo do Projeto
+
+O objetivo do DataScope é simplificar análises exploratórias de dados, permitindo que qualquer usuário visualize padrões e relações em datasets CSV sem precisar escrever código.
+
+---
+
+# ⚠️ Observações
+
+- O projeto ainda está em desenvolvimento
+- Novas visualizações e análises serão adicionadas futuramente
+- O backend pode entrar em modo de espera em períodos de inatividade (Render free tier)
+
+---
+
+# 📄 Licença
 
 Este projeto está sob a licença MIT.
-
+````
