@@ -1,4 +1,3 @@
-````md
 # DataScope
 
 DataScope é uma plataforma web de análise de dados que transforma arquivos CSV em visualizações e insights automaticamente.
@@ -6,9 +5,9 @@ DataScope é uma plataforma web de análise de dados que transforma arquivos CSV
 A aplicação permite que usuários façam upload de datasets e obtenham análises estatísticas, correlações e gráficos de forma rápida e intuitiva.
 
 ## 🌐 Projeto Online
-````
+
 🔗 [Live Demo](https://data-scope-mu.vercel.app/)
-````md
+
 ---
 
 # 🚀 Funcionalidades
@@ -60,6 +59,7 @@ O frontend renderiza tabelas, métricas e gráficos dinamicamente.
 - React
 - Vite
 - TailwindCSS
+- Plotly
 
 ## Backend
 - Python
@@ -92,13 +92,11 @@ uvicorn api:app --reload
 ---
 
 # 📌 Objetivo do Projeto
-
 O objetivo do DataScope é simplificar análises exploratórias de dados, permitindo que qualquer usuário visualize padrões e relações em datasets CSV sem precisar escrever código.
 
 ---
 
 # ⚠️ Observações
-
 - O projeto ainda está em desenvolvimento
 - Novas visualizações e análises serão adicionadas futuramente
 - O backend pode entrar em modo de espera em períodos de inatividade (Render free tier)
@@ -106,6 +104,4 @@ O objetivo do DataScope é simplificar análises exploratórias de dados, permit
 ---
 
 # 📄 Licença
-
 Este projeto está sob a licença MIT.
-````
