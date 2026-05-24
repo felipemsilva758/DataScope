@@ -6,9 +6,9 @@ DataScope é uma plataforma web de análise de dados que transforma arquivos CSV
 A aplicação permite que usuários façam upload de datasets e obtenham análises estatísticas, correlações e gráficos de forma rápida e intuitiva.
 
 ## 🌐 Projeto Online
-
+````
 🔗 [Live Demo](https://data-scope-mu.vercel.app/)
-
+````md
 ---
 
 # 🚀 Funcionalidades
